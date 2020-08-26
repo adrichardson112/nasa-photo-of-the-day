@@ -8,12 +8,10 @@ const API_KEY = "2nDspnADIdxirlPW3je6OprW76gScOwSTAjzYakX";
 const API_URL = "https://api.nasa.gov/planetary/apod?api_key="
 
 function App() {
-  const [data, setData] = useState();
-
-
   return (
     <div className="App">
-      <h1>NASA APOD</h1>
+      <h1>NASA Astronomy Photo Of The Day</h1>
+      <PhotoGrid />
     </div>
   );
 }
