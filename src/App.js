@@ -8,6 +8,16 @@ const API_URL = "https://api.nasa.gov/planetary/apod?api_key="
 function App() {
   const [data, setData] = useState();
 
+  useEffect(() => {
+    axios
+    .get(`${API_URL}${API_KEY}`)
+    .then(({data}) => {
+      console.log(data);
+    })
+    .catch(err => {
+      console.log(err);
+    })
+  }, []);
 
   return (
     <div className="App">
