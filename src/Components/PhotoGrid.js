@@ -12,6 +12,7 @@ function PhotoGrid() {
         axios.get(`${API_URL}${API_KEY}`)
             .then((response) => {
                 console.log(response);
+                setPhotos(response.data);
             })
             .catch((error) => {
                 console.log(`An error occured: ${error}`);
@@ -20,7 +21,12 @@ function PhotoGrid() {
 
     return (
         <div className="photos">
-            
+            <PhotoCard
+                title={photos.title}
+                date={photos.date}
+                explanation={photos.explanation}
+                url={photos.url}
+            />
         </div>
     )
 }
