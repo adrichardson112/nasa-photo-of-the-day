@@ -2,6 +2,7 @@ import React, {useState, useEffect} from "react";
 import axios from "axios";
 import "./App.css";
 import PhotoGrid from "./Components/PhotoGrid";
+import styled from "styled-components";
 
 
 function App() {
