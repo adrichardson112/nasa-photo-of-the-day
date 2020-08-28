@@ -1,40 +1,33 @@
 import React from "react";
 import styled from "styled-components";
 
-const BlackH2 = styled.h2`
-    padding: 40px 0 30px o;
-`
-
-const SpacedText = styled.div`
-    text-align: left;
-    width: 85%;
-    margin: auto;
-    padding: 20px 0 30px 0;
-`
-
-const ImgContainer = styled.img`
-        width: 95%;
-        height: auto;
-        margin: auto;
-`
-
-const SpaceImg = styled.img`
-        width: 95%;
-`
-
+const PhotoCard = ({ props } => {
+    return (
+        <Col md="3" lg="3">
+            <Card style={StyleS.card}>
+                <CardBody>
+                    <CardTitle>Photo Title: {props.title}/CardTitle></CardTitle>
+                    <CardText>{props.explanation}</CardText>
+                    <CardText>{props.props.release-date</CardText>
+                    <Button style={styles.button} color ="primary">Watch!ad</Button>
+                </CardBody>
+            </Card>
+        </Col>
+    )
+})
 
 
 function PhotoCard (props) {
     return (
         <div className="photoCard">
-            <BlackH2>{props.title}</BlackH2>
+            <h2>{props.title}</h2>
             <ImgContainer>
                 <SpaceImg src={props.url} alt={props.title}></SpaceImg>
             </ImgContainer>
-            <SpacedText className="written">
+            <div className="written">
             <p>Date: {props.date}</p>
             <p>{props.explanation}</p>
-        </SpacedText>
+        </div>
     </div>
     );
 };
