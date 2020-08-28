@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import PhotoCard from "./PhotoCard";
 import axios from "axios";
+import { Container } from "./Container";
 
 const API_KEY = "2nDspnADIdxirlPW3je6OprW76gScOwSTAjzYakX";
 const API_URL = "https://api.nasa.gov/planetary/apod?api_key="
