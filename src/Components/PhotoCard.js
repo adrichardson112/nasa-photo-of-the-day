@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 const StyledCard = styled.div`
 
-color: pink;
+color: slateblue;
 font-family: 'Kelly Slab', cursive;
 
 .img-container img{
